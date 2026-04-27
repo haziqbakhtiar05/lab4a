@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      input,
+      button {
+        padding: 10px;
+        font-size: 16px;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Validate Nombor</h2>
+    <p>enter number and click 'Check' to see the result.</p>
+
+    <input type="text" id="userInput" placeholder="Enter a number" />
+    <button onclick="checkInput()">Check</button>
+
+    <script>
+      function checkInput() {
+        var value = document.getElementById("userInput").value;
+
+        if (value === "" || isNaN(value)) {
+          alert("Please insert a number!");
+        } else if (value < 10) {
+          alert("The number is lower than 10");
+        } else {
+          alert("The number is higher than 10");
+        }
+      }
+    </script>
+  </body>
+</html>
